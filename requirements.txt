@@ -1,0 +1,7 @@
+customtkinter
+psutil
+pillow
+pygame
+speechrecognition
+pystray
+google-genai
