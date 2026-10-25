@@ -1,73 +1,74 @@
-## ⚡ Overview
+# ⚡ DataNest — AI Desktop Operator
 
-**DataNest** combines a cyberpunk HUD aesthetic with high-performance desktop control. Powered by the **Gemini API** and built on top of **CustomTkinter**, it runs as an executive desktop operator capable of multi-turn conversational reasoning, hardware monitoring, and natural voice interaction.
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![CustomTkinter](https://img.shields.io/badge/UI-CustomTkinter-green)
+![Gemini](https://img.shields.io/badge/AI-Google_Gemini-orange)
+![Windows](https://img.shields.io/badge/Platform-Windows-lightgrey)
 
----
+> A futuristic standalone Windows AI operator — live hardware telemetry, process supervision, neural voice interaction, and multi-turn conversational intelligence, wrapped in a cyberpunk HUD.
 
-## 🚀 Key Modules
+## ✨ What It Does
 
-| Module | Features & Capabilities |
+| Module | What You Get |
 | :--- | :--- |
-| **🤖 AI Assistant** | ChatGPT-style dynamic scrollable chat, real-time reasoning, and automated web task execution. |
-| **📊 Telemetry Hub** | Live gauge monitors for CPU load, RAM usage, and primary disk availability. |
-| **📈 Analytics** | Dynamic line chart rendering real-time CPU spikes alongside logical core thread loads. |
-| **⚡ Process Supervisor** | Task manager tracking top resource-consuming processes by Memory (MB) and PID. |
-| **🎙 Audio Engine** | Threaded voice recognition and speech response synthesis. |
-| **⚙ Utility Deck** | In-app unit storage converters and real-time exchange rate estimators. |
-
----
+| 🤖 **AI Assistant** | ChatGPT-style scrollable chat, real-time reasoning, automated web tasks |
+| 📊 **Telemetry Hub** | Live gauges for CPU load, RAM usage, and disk availability |
+| 📈 **Analytics** | Real-time CPU charts alongside logical core thread loads |
+| ⚡ **Process Supervisor** | Task-manager view of top processes by memory (MB) and PID |
+| 🎙 **Voice Engine** | Threaded voice recognition and spoken responses |
+| ⚙ **Utility Deck** | Unit converters and real-time exchange rate estimates |
 
 ## 🛠 Tech Stack
 
-- **Interface:** CustomTkinter, Tkinter Canvas (Custom charts & glowing AI Orb)
+- **Interface:** CustomTkinter, Tkinter Canvas (custom charts & glowing AI Orb)
 - **Intelligence:** Google GenAI SDK (`gemini-flash-lite`)
 - **System Telemetry:** `psutil`
 - **Audio & Voice:** `speech_recognition`, `pygame`
-- **Asset Processing:** `Pillow` (PIL)
-
----
+- **Assets:** `Pillow` (PIL)
 
 ## 📦 Installation & Setup
 
-### 1. Clone Repository
-\`\`\`bash
+```bash
 git clone https://github.com/waki44/DataNest-AI-Assistant.git
 cd DataNest-AI-Assistant
-\`\`\`
 
-### 2. Environment Setup
-\`\`\`bash
 python -m venv venv
-venv\\Scripts\\activate
+venv\Scripts\activate
 pip install -r requirements.txt
-\`\`\`
 
-### 3. Configure Credentials
-Duplicate the sample configuration and insert your API key:
-\`\`\`bash
 copy config.example.json config.json
-\`\`\`
-Edit \`config.json\`:
-\`\`\`json
+```
+
+Add your key to `config.json`:
+
+```json
 {
-  \"GEMINI_API_KEY\": \"your_actual_gemini_api_key_here\"
+  "GEMINI_API_KEY": "your_actual_gemini_api_key_here"
 }
-\`\`\`
+```
 
-### 4. Launch Operator
-\`\`\`bash
+Launch it:
+
+```bash
 python gui_assistant.py
-\`\`\`
+```
 
----
+## 📂 Project Structure
+
+```text
+├── gui_assistant.py      # Main HUD interface
+├── main_assistant.py     # Assistant entry point
+├── agent_core.py         # AI agent logic
+├── voice_service.py      # Voice input / output
+├── check_models.py       # Model checks
+├── config.example.json   # Sample configuration
+└── requirements.txt      # Dependencies
+```
 
 ## 🛡 Security Note
 
-Sensitive credentials and build artifacts are strictly excluded via \`.gitignore\`:
-- \`config.json\` is never committed to remote tracking.
-- Distributable binaries (\`dist/\`, \`build/\`) remain local.
+`config.json` is gitignored and never committed. Build artifacts (`dist/`, `build/`) stay local.
 
 ---
 
-<div align=\"center\">
-Designed & Developed by <b>Syed Waqar</b>
+Built by **Syed Waqar Raza Zaidi** · 🌐 [Portfolio](https://portfolio-website-sigma-ashen-90.vercel.app)
