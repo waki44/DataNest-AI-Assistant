@@ -7,6 +7,8 @@
 
 > A futuristic standalone Windows AI operator — live hardware telemetry, process supervision, neural voice interaction, and multi-turn conversational intelligence, wrapped in a cyberpunk HUD.
 
+![DataNest Overview](assets/overview.png)
+
 ## ✨ What It Does
 
 | Module | What You Get |
